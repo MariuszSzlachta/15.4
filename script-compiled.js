@@ -1,21 +1,24 @@
 'use strict';
 
-// {
-//   console.log('Zadanie 1.');
+{
+  console.log('Zadanie 1.');
 
-//   const a = 'Hello';
-//   const b = 'World';
-//   console.log(`${a} ${b}`);
-// }
+  var a = 'Hello';
+  var b = 'World';
+  console.log(a + ' ' + b);
+}
 
-// {
-//   console.log('Zadanie 2');
+{
+  console.log('Zadanie 2');
 
-//   const multiply = (x,y = 1) => x * y
+  var multiply = function multiply(x) {
+    var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    return x * y;
+  };
 
-//   console.log(multiply(6));
-// }
-
+  multiply(2, 5);
+  console.log(multiply(2, 5));
+}
 
 console.log('Zadanie 3');
 
@@ -28,16 +31,17 @@ var average = function average() {
   args.forEach(function (arg) {
     sum += arg;
   });
-  console.log('\u015Arednia wynosi: ' + sum / args.length);
+
   return sum / args.length;
 };
-average(1, 3, 6, 6);
+console.log('\u015Arednia wynosi ' + average(1, 2, 6, 6));
 
 console.log('Zadanie 4');
 
 var grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
 
-average.apply(null, grades);
+average.apply(undefined, grades);
+console.log(average.apply(undefined, grades));
 
 console.log('Zadanie 5');
 
@@ -45,5 +49,4 @@ var arr = [1, 4, 'Iwona', false, 'Nowak'];
 var firstName = arr[2],
     lastName = arr[4];
 
-console.log(firstName);
-console.log(lastName);
+console.log(firstName + ' ' + lastName);
