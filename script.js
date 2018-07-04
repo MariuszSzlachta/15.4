@@ -9,7 +9,7 @@
 {
   console.log('Zadanie 2');
 
-  const multiply = (x,y = 1) => x * y;
+  const multiply = (x = 1, y = 1) => x * y;
 
   multiply(2,5);
   console.log(multiply(2,5));
